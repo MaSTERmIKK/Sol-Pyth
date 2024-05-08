@@ -1,0 +1,26 @@
+---------------------------------------
+
+import numpy as np
+
+# Genera un array di 100 elementi casuali tra 0 e 1000
+array = np.random.randint(0, 1001, size=100)
+
+# Normalizza l'array
+normalized_array = (array - array.min()) / (array.max() - array.min())
+
+# Stampa l'array normalizzato
+print(normalized_array)
+
+
+----------------------------------------------
+import numpy as np
+
+# Crea un array di 10 punti con coordinate casuali
+points = np.random.randint(0, 101, size=(10, 2))
+
+# Calcola e stampa la distanza euclidea tra ogni coppia di punti
+for i in range(len(points)):
+    for j in range(i + 1, len(points)):
+        dist = np.linalg.norm(points[i] - points[j])
+        print(f"Distanza tra punto {i} e punto {j}: {dist:.2f}")
+
